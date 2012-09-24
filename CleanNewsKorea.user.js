@@ -656,11 +656,12 @@ function news_mk_co_kr()
 // photo_donga_com
 function photo_donga_com()
 {
-	subject = ">>>" + $("td.view_title").html();
-	date = $("span.view_title3").html();
-	content = $("div.view22").parent().html();
+	date = $("p.title_foot>em").html();
+	content = $("div.article_txt").parent().html();
 
 	show();
+
+	removeRemaining($("div#divBox"), 100);
 }
 
 // artsnews_mk_co_kr
