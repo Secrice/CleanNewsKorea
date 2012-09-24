@@ -43,6 +43,8 @@
 //
 // @include        http://www.hankyung.com/news/app/newsview.php*
 //
+// @include        http://www.imaeil.com/sub_news/sub_news_view.php*
+//
 // @include        http://view.heraldm.com/view.php*
 //
 // @include        http://imnews.imbc.com/replay/*
@@ -131,7 +133,9 @@ function letsJQuery() {
 
 	// Check URL.
 	url = document.location.href;
-	if (url.search("www.ohmynews.com/NWS_Web/View/at_pg.aspx") > 0)
+	if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
+		www_imaeil_com();
+	else if (url.search("www.ohmynews.com/NWS_Web/View/at_pg.aspx") > 0)
 		www_ohmynews_com();
 	else if (url.search("www.kookje.co.kr/news2011/asp/newsbody.asp") > 0)
 		www_kookje_co_kr();
@@ -228,6 +232,15 @@ function letsJQuery() {
 
 	// Remove remaining elements.
 	removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
+}
+
+// www_imaeil_com
+function www_imaeil_com()
+{
+	date = $("div#fontSzArea").parent().parent().next().next().find("td.txt2").html();
+	content = $("div#_article").html();
+
+	show();
 }
 
 // www_ohmynews_com
