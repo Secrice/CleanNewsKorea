@@ -3,92 +3,55 @@
 // @namespace      secrice.com
 // @description    Clean News without any AD!
 // @version        0.1
-//
 // @include        http://www.ajnews.co.kr/view_v2.jsp*
-//
 // @include        http://gold.asiae.co.kr/view.htm*
 // @include        http://stoo.asiae.co.kr/news/stview.htm*
 // @include        http://www.asiae.co.kr/news/view.htm*
-//
 // @include        http://www.asiatoday.co.kr/news/view.asp*
-//
 // @include        http://www.betanews.net/article/*
-//
 // @include        http://news.chosun.com/site/data/html_dir/*
 // @include        http://review.chosun.com/site/data/html_dir/*
-//
 // @include        http://www.dailian.co.kr/news/news_view.htm*
-//
 // @include        http://www.ddaily.co.kr/news/news_view.php*
-//
 // @include        http://dkbnews.donga.com/Feed/*
 // @include        http://news.donga.com/*
 // @include        http://photo.donga.com/view.php*
 // @include        http://sports.donga.com/*
-//
 // @include        http://starin.edaily.co.kr/news/NewsRead.edy*
 // @include        http://www.edaily.co.kr/news/NewsRead.edy*
-//
 // @include        http://www.electimes.com/home/news/main/viewmain.jsp*
-//
 // @include        http://www.etnews.com/news/*
-//
 // @include        http://www.etoday.co.kr/news/section/newsview.php*
-//
 // @include        http://www.fnnews.com/view*
-//
 // @include        http://www.hani.co.kr/arti/*
-//
 // @include        http://*.hankooki.com/lpage/*
-//
 // @include        http://www.hankyung.com/news/app/newsview.php*
-//
 // @include        http://www.imaeil.com/sub_news/sub_news_view.php*
-//
 // @include        http://view.heraldm.com/view.php*
-//
 // @include        http://imnews.imbc.com/replay/*
-//
 // @include        http://*.inews24.com/php/news_view.php*
-//
 // @include        http://www.jejusori.net/news/articleView.html*
-//
 // @include        http://news.kbs.co.kr/*
-//
 // @include        http://news.khan.co.kr/kh_news/khan_art_view.html*
 // @include        http://sports.khan.co.kr/news/sk_index.html*
-//
 // @include        http://www.kookje.co.kr/news2011/asp/newsbody.asp*
-//
 // @include        http://www.mediatoday.co.kr/news/articleView.html*
-//
 // @include        http://artsnews.mk.co.kr/news/*
 // @include        http://news.mk.co.kr/*/view.php*
 // @include        http://nnews.mk.co.kr/newsRead.php*
 // @include        http://star.mk.co.kr/v2/view.php*
-//
 // @include        http://www.munhwa.com/news/view.html*
-//
 // @include        http://www.mydaily.co.kr/news/read.html*
-//
 // @include        http://www.pressian.com/article/article.asp*
-//
 // @include        http://news.sbs.co.kr/section_news/news_read.jsp*
 // @include        http://news.sbs.co.kr/sports/section_sports/sports_read.jsp?*
-//
 // @include        http://www.seoul.co.kr/news/newsView.php*
-//
 // @include        http://www.sisapress.com/news/articleView.html*
-//
 // @include        http://news.sportsseoul.com/read/*
-//
 // @include        http://www.yonhapnews.co.kr/*
-//
 // @include        http://www.ytn.co.kr/_*n/*
 // @include        http://www.ytn.co.kr/photo/*
-//
 // @include        http://www.zdnet.co.kr/news/news_view.asp*
-//
 // @include        http://www.ohmynews.com/NWS_Web/View/at_pg.aspx*
 // ==/UserScript==
 
