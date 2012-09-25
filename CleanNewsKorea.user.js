@@ -3,6 +3,7 @@
 // @namespace      secrice.com
 // @description    Clean News without any AD!
 // @version        0.1
+// @grant          none
 // @include        http://www.ajnews.co.kr/view_v2.jsp*
 // @include        http://gold.asiae.co.kr/view.htm*
 // @include        http://stoo.asiae.co.kr/news/stview.htm*
