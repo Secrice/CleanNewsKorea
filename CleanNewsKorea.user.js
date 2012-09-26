@@ -42,6 +42,7 @@
 // @include        http://nnews.mk.co.kr/newsRead.php*
 // @include        http://star.mk.co.kr/v2/view.php*
 // @include        http://www.munhwa.com/news/view.html*
+// @include        http://star.mt.co.kr/stview.php*
 // @include        http://www.mydaily.co.kr/news/read.html*
 // @include        http://www.newspim.com/view.jsp*
 // @include        http://www.pressian.com/article/article.asp*
@@ -100,7 +101,9 @@ function letsJQuery() {
 
 		// Check URL.
 		url = document.location.href;
-		if (url.search("www.newspim.com/view.jsp") > 0)
+		if (url.search("star.mt.co.kr/stview.php") > 0)
+			star_mt_co_kr();
+		else if (url.search("www.newspim.com/view.jsp") > 0)
 			www_newspim_com();
 		else if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
 			www_imaeil_com();
@@ -202,6 +205,15 @@ function letsJQuery() {
 		// Remove remaining elements.
 		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
 	}, 1000);
+}
+
+// star_mt_co_kr
+function star_mt_co_kr()
+{
+	date = $("span.writer").html();
+	content = $("div#textBody").html();
+	
+	show();
 }
 
 // www_newspim_com
