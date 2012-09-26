@@ -718,14 +718,13 @@ function www_yonhapnews_co_kr()
 // news_donga_com
 function news_donga_com()
 {
-	removeObject($("div#divBox,div#view_seriallink"));
+	removeObject($("div#divBox,div#view_seriallink,div>span"));
+	removeObject($("div#view_relate_box_board").parent().parent());
 
 	date = $("p.title_foot").html();
 	content = $("div#ct.artcle_txt").html();
 
 	show();
-
-	removeRemaining($("div#view_relate_box").parent().parent(), 100);
 }
 
 // news.inews24.com
