@@ -573,7 +573,7 @@ function dkbnews_donga_com()
 
 	show();
 
-	removeRemaining($("div#scrollDiv").parent(), 1500);
+	removeDelayed("div#scrollDiv");
 }
 
 // www_fnnews_com
@@ -584,7 +584,7 @@ function www_fnnews_com()
 
 	show();
 
-	removeRemaining($("div#scrollDiv").parent(), 1000);
+	removeDelayed("div#scrollDiv");
 	removeRemaining($("div#cirteo_200200"), 1000);
 }
 
@@ -737,6 +737,28 @@ function removeRemaining(obj, timeout)
 	setTimeout(function(){
 		removeObject(obj);
 	}, timeout);
+}
+
+function removeDelayed(txt, count)
+{
+	if (count == null) {
+		count = 60; // 500ms * 50 = 25 seconds.
+	}
+
+	if (count <= 0) {
+		return;
+	}
+
+	if ($(txt).length > 0) {
+		console.log("Remove: " + txt);
+		removeRemaining($(txt), 100);
+		return;
+	}
+
+	setTimeout(function(){
+		console.log("Waiting(" + count + "): " + txt);
+		removeDelayed(txt, count - 1);
+	}, 500);
 }
 
 function show()
