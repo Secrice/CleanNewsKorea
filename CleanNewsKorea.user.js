@@ -43,6 +43,7 @@
 // @include        http://star.mk.co.kr/v2/view.php*
 // @include        http://www.munhwa.com/news/view.html*
 // @include        http://www.mydaily.co.kr/news/read.html*
+// @include        http://www.newspim.com/view.jsp*
 // @include        http://www.pressian.com/article/article.asp*
 // @include        http://news.sbs.co.kr/section_news/news_read.jsp*
 // @include        http://news.sbs.co.kr/sports/section_sports/sports_read.jsp?*
@@ -99,7 +100,9 @@ function letsJQuery() {
 
 		// Check URL.
 		url = document.location.href;
-		if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
+		if (url.search("www.newspim.com/view.jsp") > 0)
+			www_newspim_com();
+		else if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
 			www_imaeil_com();
 		else if (url.search("www.ohmynews.com/NWS_Web/View/at_pg.aspx") > 0)
 			www_ohmynews_com();
@@ -199,6 +202,15 @@ function letsJQuery() {
 		// Remove remaining elements.
 		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
 	}, 1000);
+}
+
+// www_newspim_com
+function www_newspim_com()
+{
+	date = $("p.news_date").html();
+	content = $("div.contents_body").html();
+	
+	show();
 }
 
 // www_imaeil_com
