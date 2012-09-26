@@ -433,16 +433,10 @@ function www_ddaily_co_kr()
 // www_seoul_co_kr
 function www_seoul_co_kr()
 {
-	removeObject($("div#HnAModule,table#googleAdTable"));
-
 	date = $("div.VCdate").html();
 	content = $("div#atic_txt1").html();
 
 	show();
-
-	removeRemaning($("div>dl>dt").parent().parent(), 100);
-	removeRemaning($("div>div>h4").parent().parent(), 100);
-	removeRemaning($("table#googleAdTable"), 100);
 }
 
 // www_ajnews_co_kr
