@@ -259,7 +259,7 @@ function mbn_mk_co_kr()
 function www_asiatoday_co_kr()
 {
 	date = $("td.ViewTimeText").html();
-	content = $("p.ViewText").html();
+	content = $("div#_article").html();
 
 	show();
 }
