@@ -205,7 +205,7 @@ function letsJQuery() {
 function www_imaeil_com()
 {
 	date = $("div#fontSzArea").parent().parent().next().next().find("td.txt2").html();
-	content = $("div#_article").html();
+	content = $("div#fontSzArea.article").html();
 
 	show();
 }
