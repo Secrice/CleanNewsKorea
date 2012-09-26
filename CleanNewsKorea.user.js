@@ -92,7 +92,7 @@ function GM_wait() {
 // All your GM code must be inside this function.
 function letsJQuery() {
 	console.log("JQuery Ready.");
-	$(function(){
+	setTimeout(function(){
 		console.log("Cleaning.");
 		hideAllObjects();
 		subject = $("title").html();
@@ -198,7 +198,7 @@ function letsJQuery() {
 
 		// Remove remaining elements.
 		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
-	});
+	}, 1000);
 }
 
 // www_imaeil_com
