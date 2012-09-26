@@ -91,111 +91,114 @@ function GM_wait() {
 
 // All your GM code must be inside this function.
 function letsJQuery() {
-	console.log("letsJQuery");
-	hideAllObjects();
-	subject = $("title").html();
+	console.log("JQuery Ready.");
+	$(function(){
+		console.log("Cleaning.");
+		hideAllObjects();
+		subject = $("title").html();
 
-	// Check URL.
-	url = document.location.href;
-	if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
-		www_imaeil_com();
-	else if (url.search("www.ohmynews.com/NWS_Web/View/at_pg.aspx") > 0)
-		www_ohmynews_com();
-	else if (url.search("www.kookje.co.kr/news2011/asp/newsbody.asp") > 0)
-		www_kookje_co_kr();
-	else if (url.search("www.munhwa.com/news/view.html") > 0)
-		www_munhwa_com();
-	else if (url.search("nnews.mk.co.kr/newsRead.php") > 0)
-		nnews_mk_co_kr();
-	else if (url.search("www.asiatoday.co.kr/news/view.asp") > 0)
-		www_asiatoday_co_kr();
-	else if (url.search("sports.khan.co.kr/news/sk_index.html") > 0)
-		sports_khan_co_kr();
-	else if (url.search("www.betanews.net/article/") > 0)
-		www_betanews_net();
-	else if (url.search("www.pressian.com/article/article.asp") > 0)
-		www_pressian_com();
-	else if (url.search("www.electimes.com/home/news/main/viewmain.jsp") > 0)
-		www_electimes_com();
-	else if (url.search("www.etoday.co.kr/news/section/newsview.php") > 0)
-		www_etoday_co_kr();
-	else if (url.search("stoo.asiae.co.kr/news/stview.htm") > 0)
-		stoo_asiae_co_kr();
-	else if (url.search("www.dailian.co.kr/news/news_view.htm") > 0)
-		www_dailian_co_kr();
-	else if (url.search("www.mediatoday.co.kr/news/articleView.html") > 0)
-		www_mediatoday_co_kr();
-	else if (url.search("news.sportsseoul.com/read/") > 0)
-		news_sportsseoul_com();
-	else if (url.search("starin.edaily.co.kr/news/NewsRead.edy") > 0)
-		starin_edaily_co_kr();
-	else if (url.search("www.edaily.co.kr/news/NewsRead.edy") > 0)
-		www_edaily_co_kr();
-	else if (url.search("news.khan.co.kr/kh_news/khan_art_view.html") > 0)
-		news_khan_co_kr();
-	else if (url.search("www.jejusori.net/news/articleView.html") > 0)
-		www_jejusori_net();
-	else if (url.search("www.ddaily.co.kr/news/news_view.php") > 0)
-		www_ddaily_co_kr();
-	else if (url.search("www.seoul.co.kr/news/newsView.php") > 0)
-		www_seoul_co_kr();
-	else if (url.search("www.ajnews.co.kr/view_v2.jsp") > 0)
-		www_ajnews_co_kr();
-	else if (url.search("news.chosun.com/site/data/html_dir/") > 0)
-		news_chosun_com();
-	else if (url.search("news.kbs.co.kr/") > 0)
-		news_kbs_co_kr();
-	else if (url.search(".hankooki.com/lpage/") > 0)
-		news_hankooki_com(); // news, economy
-	else if (url.search("star.mk.co.kr/v2/view.php") > 0)
-		star_mk_co_kr();
-	else if (url.search("view.heraldm.com/view.php") > 0)
-		view_heraldm_com();
-	else if (url.search("www.hankyung.com/news/app/newsview.php") > 0)
-		www_hankyung_com();
-	else if (url.search("review.chosun.com/site/data/html_dir/") > 0)
-		review_chosun_com();
-	else if (url.search("imnews.imbc.com/replay/") > 0)
-		imnews_imbc_com();
-	else if (url.search("www.zdnet.co.kr/news/news_view.asp") > 0)
-		www_zdnet_co_kr();
-	else if (url.search("www.etnews.com/news/") > 0)
-		www_etnews_com();
-	else if (url.search("www.ytn.co.kr/_") > 0)
-		www_ytn_co_kr();
-	else if (url.search("www.ytn.co.kr/photo/") > 0)
-		www_ytn_co_kr_photo();
-	else if (url.search("dkbnews.donga.com/Feed/") > 0)
-		dkbnews_donga_com();
-	else if (url.search("www.fnnews.com/view") > 0)
-		www_fnnews_com();
-	else if (url.search("www.asiae.co.kr/news/view.htm")>0 || url.search("gold.asiae.co.kr/view.htm") > 0)
-		www_asiae_co_kr(); // www, gold
-	else if (url.search("www.sisapress.com/news/articleView.html") > 0)
-		www_sisapress_com();
-	else if (url.search("news.mk.co.kr/")>0 && url.search("/view.php") > 0)
-		news_mk_co_kr();
-	else if (url.search("photo.donga.com/view.php") > 0)
-		photo_donga_com();
-	else if (url.search("artsnews.mk.co.kr/news/") > 0)
-		artsnews_mk_co_kr();
-	else if (url.search("sports.donga.com/") > 0)
-		sports_donga_com();
-	else if (url.search("news.sbs.co.kr/s") > 0)
-		news_sbs_co_kr(); // section_news, sports/section_sports
-	else if (url.search("www.mydaily.co.kr/news/read.html") > 0)
-		www_mydaily_co_kr();
-	else if (url.search("www.hani.co.kr/arti/") > 0)
-		www_hani_co_kr();
-	else if (url.search("www.yonhapnews.co.kr/") > 0)
-		www_yonhapnews_co_kr();
-	else if (url.search("news.donga.com/") > 0)
-		news_donga_com();
-	else if (url.search(".inews24.com/php/news_view.php") > 0)
-		news_inews24_com(); // news, joynews
+		// Check URL.
+		url = document.location.href;
+		if (url.search("www.imaeil.com/sub_news/sub_news_view.php") > 0)
+			www_imaeil_com();
+		else if (url.search("www.ohmynews.com/NWS_Web/View/at_pg.aspx") > 0)
+			www_ohmynews_com();
+		else if (url.search("www.kookje.co.kr/news2011/asp/newsbody.asp") > 0)
+			www_kookje_co_kr();
+		else if (url.search("www.munhwa.com/news/view.html") > 0)
+			www_munhwa_com();
+		else if (url.search("nnews.mk.co.kr/newsRead.php") > 0)
+			nnews_mk_co_kr();
+		else if (url.search("www.asiatoday.co.kr/news/view.asp") > 0)
+			www_asiatoday_co_kr();
+		else if (url.search("sports.khan.co.kr/news/sk_index.html") > 0)
+			sports_khan_co_kr();
+		else if (url.search("www.betanews.net/article/") > 0)
+			www_betanews_net();
+		else if (url.search("www.pressian.com/article/article.asp") > 0)
+			www_pressian_com();
+		else if (url.search("www.electimes.com/home/news/main/viewmain.jsp") > 0)
+			www_electimes_com();
+		else if (url.search("www.etoday.co.kr/news/section/newsview.php") > 0)
+			www_etoday_co_kr();
+		else if (url.search("stoo.asiae.co.kr/news/stview.htm") > 0)
+			stoo_asiae_co_kr();
+		else if (url.search("www.dailian.co.kr/news/news_view.htm") > 0)
+			www_dailian_co_kr();
+		else if (url.search("www.mediatoday.co.kr/news/articleView.html") > 0)
+			www_mediatoday_co_kr();
+		else if (url.search("news.sportsseoul.com/read/") > 0)
+			news_sportsseoul_com();
+		else if (url.search("starin.edaily.co.kr/news/NewsRead.edy") > 0)
+			starin_edaily_co_kr();
+		else if (url.search("www.edaily.co.kr/news/NewsRead.edy") > 0)
+			www_edaily_co_kr();
+		else if (url.search("news.khan.co.kr/kh_news/khan_art_view.html") > 0)
+			news_khan_co_kr();
+		else if (url.search("www.jejusori.net/news/articleView.html") > 0)
+			www_jejusori_net();
+		else if (url.search("www.ddaily.co.kr/news/news_view.php") > 0)
+			www_ddaily_co_kr();
+		else if (url.search("www.seoul.co.kr/news/newsView.php") > 0)
+			www_seoul_co_kr();
+		else if (url.search("www.ajnews.co.kr/view_v2.jsp") > 0)
+			www_ajnews_co_kr();
+		else if (url.search("news.chosun.com/site/data/html_dir/") > 0)
+			news_chosun_com();
+		else if (url.search("news.kbs.co.kr/") > 0)
+			news_kbs_co_kr();
+		else if (url.search(".hankooki.com/lpage/") > 0)
+			news_hankooki_com(); // news, economy
+		else if (url.search("star.mk.co.kr/v2/view.php") > 0)
+			star_mk_co_kr();
+		else if (url.search("view.heraldm.com/view.php") > 0)
+			view_heraldm_com();
+		else if (url.search("www.hankyung.com/news/app/newsview.php") > 0)
+			www_hankyung_com();
+		else if (url.search("review.chosun.com/site/data/html_dir/") > 0)
+			review_chosun_com();
+		else if (url.search("imnews.imbc.com/replay/") > 0)
+			imnews_imbc_com();
+		else if (url.search("www.zdnet.co.kr/news/news_view.asp") > 0)
+			www_zdnet_co_kr();
+		else if (url.search("www.etnews.com/news/") > 0)
+			www_etnews_com();
+		else if (url.search("www.ytn.co.kr/_") > 0)
+			www_ytn_co_kr();
+		else if (url.search("www.ytn.co.kr/photo/") > 0)
+			www_ytn_co_kr_photo();
+		else if (url.search("dkbnews.donga.com/Feed/") > 0)
+			dkbnews_donga_com();
+		else if (url.search("www.fnnews.com/view") > 0)
+			www_fnnews_com();
+		else if (url.search("www.asiae.co.kr/news/view.htm")>0 || url.search("gold.asiae.co.kr/view.htm") > 0)
+			www_asiae_co_kr(); // www, gold
+		else if (url.search("www.sisapress.com/news/articleView.html") > 0)
+			www_sisapress_com();
+		else if (url.search("news.mk.co.kr/")>0 && url.search("/view.php") > 0)
+			news_mk_co_kr();
+		else if (url.search("photo.donga.com/view.php") > 0)
+			photo_donga_com();
+		else if (url.search("artsnews.mk.co.kr/news/") > 0)
+			artsnews_mk_co_kr();
+		else if (url.search("sports.donga.com/") > 0)
+			sports_donga_com();
+		else if (url.search("news.sbs.co.kr/s") > 0)
+			news_sbs_co_kr(); // section_news, sports/section_sports
+		else if (url.search("www.mydaily.co.kr/news/read.html") > 0)
+			www_mydaily_co_kr();
+		else if (url.search("www.hani.co.kr/arti/") > 0)
+			www_hani_co_kr();
+		else if (url.search("www.yonhapnews.co.kr/") > 0)
+			www_yonhapnews_co_kr();
+		else if (url.search("news.donga.com/") > 0)
+			news_donga_com();
+		else if (url.search(".inews24.com/php/news_view.php") > 0)
+			news_inews24_com(); // news, joynews
 
-	// Remove remaining elements.
-	removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
+		// Remove remaining elements.
+		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
+	});
 }
 
 // www_imaeil_com
