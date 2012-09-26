@@ -204,7 +204,7 @@ function letsJQuery() {
 
 		// Remove remaining elements.
 		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
-	}, 1000);
+	}, 500);
 }
 
 // star_mt_co_kr
