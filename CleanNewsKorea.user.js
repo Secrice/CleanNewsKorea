@@ -435,6 +435,8 @@ function www_ddaily_co_kr()
 // www_seoul_co_kr
 function www_seoul_co_kr()
 {
+	removeObject($("table#googleAdTable"));
+
 	date = $("div.VCdate").html();
 	content = $("div#atic_txt1").html();
 
