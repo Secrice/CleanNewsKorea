@@ -613,7 +613,10 @@ function www_fnnews_com()
 // www_asiae_co_kr
 function www_asiae_co_kr()
 {
-	removeObject($("div.txt>div,span#mk_pop1"));
+	removeObject($("div.txt>div,span"));
+	for (var i = 1; i <= 10; i++) {
+		removeObject($("span#mk_pop" + i));
+	}
 
 	date = $("div.area_title>p").html();
 	content = $("div.txt").html();
