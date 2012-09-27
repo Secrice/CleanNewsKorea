@@ -203,7 +203,7 @@ function letsJQuery() {
 			news_inews24_com(); // news, joynews
 
 		// Remove remaining elements.
-		removeRemaining($("iframe,div#soeaFrame_,div#soeaLayerLoc_fi,div#CmAdBody,script"), 1500);
+		removeRemaining($("iframe,div#soeaFrame_,div#CmAdBody,script"), 1500);
 	}, 500);
 }
 
@@ -375,6 +375,8 @@ function news_sportsseoul_com()
 	content = $("div#content_area").html() + $("div#content_area2").html();
 
 	show();
+
+	removeDelayed("div#soeaLayerLoc_fi");
 }
 
 // starin_edaily_co_kr
