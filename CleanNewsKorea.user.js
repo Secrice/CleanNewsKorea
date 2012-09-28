@@ -330,8 +330,7 @@ function www_electimes_com()
 // www_etoday_co_kr
 function www_etoday_co_kr()
 {
-	subject = ">>>" + $("div#vtitle").html();
-	date = $("div.colb.mart20").html();
+	date = $("div.data_left").find("em").html();
 	content = $("span#newsContent").html();
 
 	show();
