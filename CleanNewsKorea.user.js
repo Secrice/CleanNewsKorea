@@ -45,6 +45,7 @@
 // @include        http://star.mt.co.kr/stview.php*
 // @include        http://www.mydaily.co.kr/news/read.html*
 // @include        http://www.newspim.com/view.jsp*
+// @include        http://www.ohmynews.com/NWS_Web/View/at_pg.aspx*
 // @include        http://www.pressian.com/article/article.asp*
 // @include        http://news.sbs.co.kr/section_news/news_read.jsp*
 // @include        http://news.sbs.co.kr/sports/section_sports/sports_read.jsp?*
@@ -55,7 +56,6 @@
 // @include        http://www.ytn.co.kr/_*n/*
 // @include        http://www.ytn.co.kr/photo/*
 // @include        http://www.zdnet.co.kr/news/news_view.asp*
-// @include        http://www.ohmynews.com/NWS_Web/View/at_pg.aspx*
 // ==/UserScript==
 
 var $;
@@ -101,7 +101,9 @@ function letsJQuery() {
 
 		// Check URL.
 		url = document.location.href;
-		if (url.search("star.mt.co.kr/stview.php") > 0)
+		if (url.search("news.jkn.co.kr/article/") > 0)
+			news_jkn_co_kr();
+		else if (url.search("star.mt.co.kr/stview.php") > 0)
 			star_mt_co_kr();
 		else if (url.search("www.newspim.com/view.jsp") > 0)
 			www_newspim_com();
@@ -205,6 +207,15 @@ function letsJQuery() {
 		// Remove remaining elements.
 		removeRemaining($("iframe,div#soeaFrame_,div#CmAdBody,script"), 1500);
 	}, 500);
+}
+
+// news_jkn_co_kr
+function news_jkn_co_kr()
+{
+	date = $("ul#at_info>li").remove("a").html();
+	content = $("div#article").html();
+
+	show();
 }
 
 // star_mt_co_kr
