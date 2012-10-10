@@ -151,7 +151,7 @@ function letsJQuery() {
 			www_seoul_co_kr();
 		else if (url.search("www.ajnews.co.kr/view_v2.jsp") > 0)
 			www_ajnews_co_kr();
-		else if (url.search("news.chosun.com/site/data/html_dir/") > 0)
+		else if (url.search("news.chosun.com/site/data/html_dir/") > 0 || url.search("review.chosun.com/site/data/html_dir/") > 0)
 			news_chosun_com();
 		else if (url.search("news.kbs.co.kr/") > 0)
 			news_kbs_co_kr();
@@ -163,8 +163,6 @@ function letsJQuery() {
 			view_heraldm_com();
 		else if (url.search("www.hankyung.com/news/app/newsview.php") > 0)
 			www_hankyung_com();
-		else if (url.search("review.chosun.com/site/data/html_dir/") > 0)
-			review_chosun_com();
 		else if (url.search("imnews.imbc.com/replay/") > 0)
 			imnews_imbc_com();
 		else if (url.search("www.zdnet.co.kr/news/news_view.asp") > 0)
@@ -529,9 +527,8 @@ function www_hankyung_com()
 // review_chosun_com
 function review_chosun_com()
 {
-	subject = ">>>" + $("dd#title_text.title_txt").html();
-	date = $("div#date_text.art_date").html();
-	content = $("div#ArticlePar01").html();
+	date = $("p#date_text").html();
+	content = $("div.article").html();
 
 	show();
 }
