@@ -721,12 +721,12 @@ function www_hani_co_kr()
 // www_yonhapnews_co_kr
 function www_yonhapnews_co_kr()
 {
-	date = $("span.pblsh").html();
-	content = $("div.article_contents").html();
+	removeObject($("div#f_tab01,div#f_tab02"));
+
+	date = $("span.date").html();
+	content = $("div#articleBody").html();
 
 	show();
-
-	removeRemaining($("div#cleannews_content>h2"), 100);
 }
 
 // news_donga_com
